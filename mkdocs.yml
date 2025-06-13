@@ -1,0 +1,92 @@
+site_name: NIRI DOCUMENTATION
+
+nav:
+  - HOME: index.md
+
+  - USAGE:
+  
+      - Getting Started: Getting-Started.md
+      - Example systemd Setup: Example-systemd-Setup.md
+      - Important Software: Important-Software.md
+      - Workspaces: Workspaces.md
+      - Floating Windows: Floating-Windows.md
+      - Tabs: Tabs.md
+      - Overview: Overview.md
+      - Screencasting: Screencasting.md
+      - Layer‐Shell Components: Layer%E2%80%90Shell-Components.md
+      - IPC, `niri msg`: IPC.md
+      - Application-Specific Issues: Application-Issues.md
+      - Xwayland: Xwayland.md
+      - Gestures: Gestures.md
+      - Packaging niri: Packaging-niri.md
+      - FAQ: FAQ.md
+
+  - CONFIGURATION:
+
+      - Introduction: Configuration-Introduction.md
+      - Input: Configuration:-Input.md
+      - Outputs: Configuration:-Outputs.md
+      - Key Bindings: Configuration:-Key-Bindings.md
+      - Switch Events: Configuration:-Switch-Events.md
+      - Layout: Configuration:-Layout.md
+      - Named Workspaces: Configuration:-Named-Workspaces.md
+      - Miscellaneous: Configuration:-Miscellaneous.md
+      - Window Rules: Configuration:-Window-Rules.md
+      - Layer Rules: Configuration:-Layer-Rules.md
+      - Animations: Configuration:-Animations.md
+      - Gestures: Configuration:-Gestures.md
+      - Debug Options: Configuration:-Debug-Options.md
+
+  - DEVELOPMENT:
+ 
+      - Design Principles: Development:-Design-Principles.md
+      - Developing niri: Development:-Developing-niri.md
+      - Fractional Layout: Development:-Fractional-Layout.md
+      - Redraw Loop: Development:-Redraw-Loop.md
+      - Animation Timing: Development:-Animation-Timing.md
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Poppins
+    code: Azeret Mono
+  logo: assets/logo-mid.svg
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  # Additional Markdown extensions...
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.snippets
+
