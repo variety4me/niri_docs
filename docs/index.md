@@ -33,16 +33,16 @@ When a monitor disconnects, its workspaces will move to another monitor, but upo
 ## Features
 
 - Built from the ground up for scrollable tiling
-- [Dynamic workspaces](https://github.com/YaLTeR/niri/wiki/Workspaces) like in GNOME
+- [Dynamic workspaces](Workspaces) like in GNOME
 - An [Overview](https://github.com/user-attachments/assets/379a5d1f-acdb-4c11-b36c-e85fd91f0995) that zooms out workspaces and windows
 - Built-in screenshot UI
 - Monitor and window screencasting through xdg-desktop-portal-gnome
-    - You can [block out](https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules#block-out-from) sensitive windows from screencasts
-    - [Dynamic cast target](https://github.com/YaLTeR/niri/wiki/Screencasting#dynamic-screencast-target) that can change what it shows on the go
+    - You can [block out](Configuration-Window-Rules#block-out-from) sensitive windows from screencasts
+    - [Dynamic cast target](Screencasting#dynamic-screencast-target) that can change what it shows on the go
 - [Touchpad](https://github.com/YaLTeR/niri/assets/1794388/946a910e-9bec-4cd1-a923-4a9421707515) and [mouse](https://github.com/YaLTeR/niri/assets/1794388/8464e65d-4bf2-44fa-8c8e-5883355bd000) gestures
-- Group windows into [tabs](https://github.com/YaLTeR/niri/wiki/Tabs)
+- Group windows into [tabs](Tabs)
 - Configurable layout: gaps, borders, struts, window sizes
-- [Gradient borders](https://github.com/YaLTeR/niri/wiki/Configuration:-Layout#gradients) with Oklab and Oklch support
+- [Gradient borders](Configuration-Layout#gradients) with Oklab and Oklch support
 - [Animations](https://github.com/YaLTeR/niri/assets/1794388/ce178da2-af9e-4c51-876f-8709c241d95e) with support for [custom shaders](https://github.com/YaLTeR/niri/assets/1794388/27a238d6-0a22-4692-b794-30dc7a626fad)
 - Live-reloading config
 
@@ -56,7 +56,7 @@ Niri is stable for day-to-day use and does most things expected of a Wayland com
 Many people are daily-driving niri, and are happy to help in our [Matrix channel].
 
 Give it a try!
-Follow the instructions on the [Getting Started](https://github.com/YaLTeR/niri/wiki/Getting-Started) wiki page.
+Follow the instructions on the [Getting Started](Getting-Started) wiki page.
 Have your [waybar]s and [fuzzel]s ready: niri is not a complete desktop environment.
 
 Here are some points you may have questions about:
@@ -72,7 +72,7 @@ We have touchpad gestures, but no touchscreen gestures yet.
 You can check on [wayland.app](https://wayland.app) at the bottom of each protocol's page.
 - **Performance**: while I run niri on beefy machines, I try to stay conscious of performance.
 I've seen someone use it fine on an Eee PC 900 from 2008, of all things.
-- **Xwayland**: no built-in support, but xwayland-satellite is [easy to set up](https://github.com/YaLTeR/niri/wiki/Xwayland#using-xwayland-satellite) and works very well.
+- **Xwayland**: no built-in support, but xwayland-satellite is [easy to set up](Xwayland#using-xwayland-satellite) and works very well.
     - Steam and games, including Proton: work perfectly through xwayland-satellite.
     - JetBrains IDEs, Ghidra: work well through xwayland-satellite.
     - Discord and other Electron apps: work well through xwayland-satellite.

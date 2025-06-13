@@ -13,7 +13,7 @@ nav:
       - Tabs: Tabs.md
       - Overview: Overview.md
       - Screencasting: Screencasting.md
-      - Layer‐Shell Components: Layer%E2%80%90Shell-Components.md
+      - Layer‐Shell Components: Layer-Shell-Components.md
       - IPC, `niri msg`: IPC.md
       - Application-Specific Issues: Application-Issues.md
       - Xwayland: Xwayland.md
@@ -24,26 +24,26 @@ nav:
   - CONFIGURATION:
 
       - Introduction: Configuration-Introduction.md
-      - Input: Configuration:-Input.md
-      - Outputs: Configuration:-Outputs.md
-      - Key Bindings: Configuration:-Key-Bindings.md
-      - Switch Events: Configuration:-Switch-Events.md
-      - Layout: Configuration:-Layout.md
-      - Named Workspaces: Configuration:-Named-Workspaces.md
-      - Miscellaneous: Configuration:-Miscellaneous.md
-      - Window Rules: Configuration:-Window-Rules.md
-      - Layer Rules: Configuration:-Layer-Rules.md
-      - Animations: Configuration:-Animations.md
-      - Gestures: Configuration:-Gestures.md
-      - Debug Options: Configuration:-Debug-Options.md
+      - Input: Configuration-Input.md
+      - Outputs: Configuration-Outputs.md
+      - Key Bindings: Configuration-Key-Bindings.md
+      - Switch Events: Configuration-Switch-Events.md
+      - Layout: Configuration-Layout.md
+      - Named Workspaces: Configuration-Named-Workspaces.md
+      - Miscellaneous: Configuration-Miscellaneous.md
+      - Window Rules: Configuration-Window-Rules.md
+      - Layer Rules: Configuration-Layer-Rules.md
+      - Animations: Configuration-Animations.md
+      - Gestures: Configuration-Gestures.md
+      - Debug Options: Configuration-Debug-Options.md
 
   - DEVELOPMENT:
  
-      - Design Principles: Development:-Design-Principles.md
-      - Developing niri: Development:-Developing-niri.md
-      - Fractional Layout: Development:-Fractional-Layout.md
-      - Redraw Loop: Development:-Redraw-Loop.md
-      - Animation Timing: Development:-Animation-Timing.md
+      - Design Principles: Development-Design-Principles.md
+      - Developing niri: Development-Developing-niri.md
+      - Fractional Layout: Development-Fractional-Layout.md
+      - Redraw Loop: Development-Redraw-Loop.md
+      - Animation Timing: Development-Animation-Timing.md
 
 theme:
   name: material
