@@ -145,7 +145,7 @@ You can check whether an output supports VRR in `niri msg outputs`.
 > [!NOTE]
 > Some drivers have various issues with VRR.
 >
-> If the cursor moves at a low framerate with VRR, try setting the [`disable-cursor-plane` debug flag](./Configuration:-Debug-Options.md#disable-cursor-plane) and reconnecting the monitor.
+> If the cursor moves at a low framerate with VRR, try setting the [`disable-cursor-plane` debug flag](./Configuration-Debug-Options.md#disable-cursor-plane) and reconnecting the monitor.
 >
 > If a monitor is not detected as VRR-capable when it should, sometimes unplugging a different monitor fixes it.
 >
@@ -217,3 +217,4 @@ output "HDMI-A-1" {
     backdrop-color "#001100"
 }
 ```
+

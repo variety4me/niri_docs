@@ -388,7 +388,7 @@ Before, it could only use the connector name.
 
 <sup>Since: 0.1.6</sup>
 
-Make the window open on a specific [named workspace](./Configuration:-Named-Workspaces.md).
+Make the window open on a specific [named workspace](./Configuration-Named-Workspaces.md).
 
 If such a workspace does not exist, the window will open on the currently focused workspace as usual.
 
@@ -500,7 +500,7 @@ You can block out windows from xdg-desktop-portal screencasts.
 They will be replaced with solid black rectangles.
 
 This can be useful for password managers or messenger windows, etc.
-For layer-shell notification pop-ups and the like, you can use a [`block-out-from` layer rule](./Configuration:-Layer-Rules.md#block-out-from).
+For layer-shell notification pop-ups and the like, you can use a [`block-out-from` layer rule](./Configuration-Layer-Rules.md#block-out-from).
 
 ![Screenshot showing a window visible normally, but blocked out on OBS.](./img/block-out-from-screencast.png)
 
@@ -566,7 +566,7 @@ Opacity is applied to every surface of the window individually, so subsurfaces a
 
 Also, focus ring and border with background will show through semitransparent windows (see `prefer-no-csd` and the `draw-border-with-background` window rule below).
 
-Opacity can be toggled on or off for a window using the [`toggle-window-rule-opacity`](./Configuration:-Key-Bindings.md#toggle-window-rule-opacity) action.
+Opacity can be toggled on or off for a window using the [`toggle-window-rule-opacity`](./Configuration-Key-Bindings.md#toggle-window-rule-opacity) action.
 
 ```kdl
 // Make inactive windows semitransparent.
@@ -676,7 +676,7 @@ window-rule {
 
 Set a scroll factor for all scroll events sent to a window.
 
-This will be multiplied with the scroll factor set for your input device in the [input section](./Configuration:-Input.md#pointing-devices).
+This will be multiplied with the scroll factor set for your input device in the [input section](./Configuration-Input.md#pointing-devices).
 
 ```kdl
 // Make scrolling in Firefox a bit slower.
@@ -712,7 +712,7 @@ window-rule {
 
 Override the focus ring and border options for the window.
 
-These rules have the same options as the normal [`focus-ring` and `border` config in the layout section](./Configuration:-Layout.md#focus-ring-and-border), so check the documentation there.
+These rules have the same options as the normal [`focus-ring` and `border` config in the layout section](./Configuration-Layout.md#focus-ring-and-border), so check the documentation there.
 
 However, in addition to `off` to disable the border/focus ring, this window rule has an `on` flag that enables the border/focus ring for the window even if it was otherwise disabled.
 The `on` flag has precedence over the `off` flag, in case both are set.
@@ -739,7 +739,7 @@ window-rule {
 
 Override the shadow options for the window.
 
-This rule has the same options as the normal [`shadow` config in the layout section](./Configuration:-Layout.md#shadow), so check the documentation there.
+This rule has the same options as the normal [`shadow` config in the layout section](./Configuration-Layout.md#shadow), so check the documentation there.
 
 However, in addition to `on` to enable the shadow, this window rule has an `off` flag that disables the shadow for the window even if it was otherwise enabled.
 The `on` flag has precedence over the `off` flag, in case both are set.
@@ -761,7 +761,7 @@ window-rule {
 
 Override the tab indicator options for the window.
 
-Options in this rule match the same options as the normal [`tab-indicator` config in the layout section](./Configuration:-Layout.md#tab-indicator), so check the documentation there.
+Options in this rule match the same options as the normal [`tab-indicator` config in the layout section](./Configuration-Layout.md#tab-indicator), so check the documentation there.
 
 ```kdl
 // Make KeePassXC tab have a dark red inactive color.
@@ -853,7 +853,7 @@ Informs the window that it is tiled.
 Usually, windows will react by becoming rectangular and hiding their client-side shadows.
 Windows that snap their size to a grid (e.g. terminals like [foot](https://codeberg.org/dnkl/foot)) will usually disable this snapping when they are tiled.
 
-By default, niri will set the tiled state to `true` together with [`prefer-no-csd`](./Configuration:-Miscellaneous.md#prefer-no-csd) in order to improve behavior for apps that don't support server-side decorations.
+By default, niri will set the tiled state to `true` together with [`prefer-no-csd`](./Configuration-Miscellaneous.md#prefer-no-csd) in order to improve behavior for apps that don't support server-side decorations.
 You can use this window rule to override this, for example to get rectangular windows with CSD.
 
 ```kdl
@@ -913,3 +913,4 @@ window-rule {
     min-width 876
 }
 ```
+

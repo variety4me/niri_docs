@@ -2,7 +2,7 @@ Since niri is not a complete desktop environment, you will very likely want to r
 
 ### Notification Daemon
 
-Many apps need one. For example, [mako](https://github.com/emersion/mako) works well. Use [a systemd setup](./Example-systemd-Setup.md) or [`spawn-at-startup`](./Configuration:-Miscellaneous.md#spawn-at-startup).
+Many apps need one. For example, [mako](https://github.com/emersion/mako) works well. Use [a systemd setup](./Example-systemd-Setup.md) or [`spawn-at-startup`](./Configuration-Miscellaneous.md#spawn-at-startup).
 
 ### Portals
 
@@ -28,7 +28,7 @@ If you do not want to install `nautilus` (say you use `nemo` instead), you can s
 
 ### Authentication Agent
 
-Required when apps need to ask for root permissions. Something like `plasma-polkit-agent` works fine. Start it [with systemd](./Example-systemd-Setup.md) or with [`spawn-at-startup`](./Configuration:-Miscellaneous.md#spawn-at-startup).
+Required when apps need to ask for root permissions. Something like `plasma-polkit-agent` works fine. Start it [with systemd](./Example-systemd-Setup.md) or with [`spawn-at-startup`](./Configuration-Miscellaneous.md#spawn-at-startup).
 
 Note that to start `plasma-polkit-agent` with systemd on Fedora, you'll need to override its systemd service to add the correct dependency. Run:
 
@@ -44,3 +44,4 @@ To run X11 apps like Steam or Discord, you can use [xwayland-satellite].
 Check [the Xwayland wiki page](./Xwayland.md) for instructions.
 
 [xwayland-satellite]: https://github.com/Supreeeme/xwayland-satellite
+

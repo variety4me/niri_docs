@@ -57,7 +57,7 @@ Add lines like this to spawn processes at niri startup.
 
 `spawn-at-startup` accepts a path to the program binary as the first argument, followed by arguments to the program.
 
-This option works the same way as the [`spawn` key binding action](./Configuration:-Key-Bindings.md#spawn), so please read about all its subtleties there.
+This option works the same way as the [`spawn` key binding action](./Configuration-Key-Bindings.md#spawn), so please read about all its subtleties there.
 
 ```kdl
 spawn-at-startup "waybar"
@@ -192,13 +192,13 @@ overview {
 }
 ```
 
-You can also set the color per-output [in the output config](./Configuration:-Outputs.md#backdrop-color).
+You can also set the color per-output [in the output config](./Configuration-Outputs.md#backdrop-color).
 
 #### `workspace-shadow`
 
 Control the shadow behind workspaces visible in the overview.
 
-Settings here mirror the normal [`shadow` config in the layout section](./Configuration:-Layout.md#shadow), so check the documentation there.
+Settings here mirror the normal [`shadow` config in the layout section](./Configuration-Layout.md#shadow), so check the documentation there.
 
 Workspace shadows are configured for a workspace size normalized to 1080 pixels tall, then zoomed out together with the workspace.
 Practically, this means that you'll want bigger spread, offset, and softness compared to window shadows.
@@ -276,4 +276,5 @@ hotkey-overlay {
 }
 ```
 
-You can customize which binds the hotkey overlay shows using the [`hotkey-overlay-title` property](./Configuration:-Key-Bindings.md#custom-hotkey-overlay-titles).
+You can customize which binds the hotkey overlay shows using the [`hotkey-overlay-title` property](./Configuration-Key-Bindings.md#custom-hotkey-overlay-titles).
+

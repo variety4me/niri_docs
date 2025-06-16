@@ -6,7 +6,7 @@ Layer rules let you adjust behavior for individual layer-shell surfaces.
 They have `match` and `exclude` directives that control which layer-shell surfaces the rule should apply to, and a number of properties that you can set.
 
 Layer rules are processed and work very similarly to window rules, just with different matchers and properties.
-Please read the [window rules wiki page](./Configuration:-Window-Rules.md) to learn how matching works.
+Please read the [window rules wiki page](./Configuration-Window-Rules.md) to learn how matching works.
 
 Here are all matchers and properties that a layer rule could have:
 
@@ -80,7 +80,7 @@ They will be replaced with solid black rectangles.
 
 This can be useful for notifications.
 
-The same caveats and instructions apply as for the [`block-out-from` window rule](./Configuration:-Window-Rules.md#block-out-from), so check the documentation there.
+The same caveats and instructions apply as for the [`block-out-from` window rule](./Configuration-Window-Rules.md#block-out-from), so check the documentation there.
 
 ![Screenshot showing a notification visible normally, but blocked out on OBS.](./img/layer-block-out-from-screencast.png)
 
@@ -116,7 +116,7 @@ layer-rule {
 
 Override the shadow options for the surface.
 
-These rules have the same options as the normal [`shadow` config in the layout section](./Configuration:-Layout.md#shadow), so check the documentation there.
+These rules have the same options as the normal [`shadow` config in the layout section](./Configuration-Layout.md#shadow), so check the documentation there.
 
 Unlike window shadows, layer surface shadows always need to be enabled with a layer rule.
 That is, enabling shadows in the layout config section won't automatically enable them for layer surfaces.
@@ -181,7 +181,7 @@ layer-rule {
 
 Make your layer surfaces FLOAT up and down.
 
-This is a natural extension of the [April Fools' 2025 feature](./Configuration:-Window-Rules.md#baba-is-float).
+This is a natural extension of the [April Fools' 2025 feature](./Configuration-Window-Rules.md#baba-is-float).
 
 ```kdl
 // Make fuzzel FLOAT.
@@ -191,3 +191,4 @@ layer-rule {
     baba-is-float true
 }
 ```
+

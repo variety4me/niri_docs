@@ -2,17 +2,17 @@
 
 You can find documentation for various sections of the config on these wiki pages:
 
-* [`input {}`](./Configuration:-Input.md)
-* [`output "eDP-1" {}`](./Configuration:-Outputs.md)
-* [`binds {}`](./Configuration:-Key-Bindings.md)
-* [`switch-events {}`](./Configuration:-Switch-Events.md)
-* [`layout {}`](./Configuration:-Layout.md)
-* [top-level options](./Configuration:-Miscellaneous.md)
-* [`window-rule {}`](./Configuration:-Window-Rules.md)
-* [`layer-rule {}`](./Configuration:-Layer-Rules.md)
-* [`animations {}`](./Configuration:-Animations.md)
-* [`gestures {}`](./Configuration:-Gestures.md)
-* [`debug {}`](./Configuration:-Debug-Options.md)
+* [`input {}`](./Configuration-Input.md)
+* [`output "eDP-1" {}`](./Configuration-Outputs.md)
+* [`binds {}`](./Configuration-Key-Bindings.md)
+* [`switch-events {}`](./Configuration-Switch-Events.md)
+* [`layout {}`](./Configuration-Layout.md)
+* [top-level options](./Configuration-Miscellaneous.md)
+* [`window-rule {}`](./Configuration-Window-Rules.md)
+* [`layer-rule {}`](./Configuration-Layer-Rules.md)
+* [`animations {}`](./Configuration-Animations.md)
+* [`gestures {}`](./Configuration-Gestures.md)
+* [`debug {}`](./Configuration-Debug-Options.md)
 
 ### Loading
 
@@ -131,7 +131,7 @@ output "eDP-1" {
 ### Defaults
 
 Omitting most of the sections of the config file will leave you with the default values for that section.
-A notable exception is [`binds {}`](./Configuration:-Key-Bindings.md): they do not get filled with defaults, so make sure you do not erase this section.
+A notable exception is [`binds {}`](./Configuration-Key-Bindings.md): they do not get filled with defaults, so make sure you do not erase this section.
 
 ### Breaking Change Policy
 
@@ -148,3 +148,4 @@ Commits between releases can and do occasionally break the config as new feature
 However, I do try to limit these, since several people are running git builds.
 
 [KDL]: https://kdl.dev/
+

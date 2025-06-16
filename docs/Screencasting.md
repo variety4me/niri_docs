@@ -42,7 +42,7 @@ layer-rule {
 }
 ```
 
-Check [the corresponding wiki section](./Configuration:-Window-Rules.md#block-out-from) for more details and examples.
+Check [the corresponding wiki section](./Configuration-Window-Rules.md#block-out-from) for more details and examples.
 
 ### Dynamic screencast target
 
@@ -76,7 +76,7 @@ All dynamic casts share the same target, but new ones start out empty until the 
 
 <sup>Since: 25.02</sup>
 
-The [`is-window-cast-target=true` window rule](./Configuration:-Window-Rules.md#is-window-cast-target) matches windows targetted by an ongoing window screencast.
+The [`is-window-cast-target=true` window rule](./Configuration-Window-Rules.md#is-window-cast-target) matches windows targetted by an ongoing window screencast.
 You use it with a special border color to clearly indicate screencasted windows.
 
 This also works for windows targetted by dynamic screencasts.
@@ -134,3 +134,4 @@ Here's an example showing a windowed-fullscreen Google Slides [presentation](htt
 ![Windowed Google Slides presentation, another window showing the presenter view, and another window showing Zoom UI casting the presentation.](https://github.com/user-attachments/assets/b2b49eea-f5a0-4c0a-b537-51fd1949a59d)
 
 [OBS]: https://obsproject.com/
+

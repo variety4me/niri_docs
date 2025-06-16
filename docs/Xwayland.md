@@ -9,7 +9,7 @@ xwayland-satellite works well with most applications: Steam, games, Discord, eve
 However, X11 apps that want to position windows or bars at specific screen coordinates won't behave correctly.
 
 > [!NOTE]
-> In the next release, niri will have [built-in xwayland-satellite integration](./Configuration:-Miscellaneous.md#xwayland-satellite).
+> In the next release, niri will have [built-in xwayland-satellite integration](./Configuration-Miscellaneous.md#xwayland-satellite).
 > You can try it by installing git versions of both niri and xwayland-satellite.
 > With no further configuration, niri will create X11 sockets, then when an X11 client connects, automatically start xwayland-satellite.
 >
@@ -26,7 +26,7 @@ env DISPLAY=:0 flatpak run com.valvesoftware.Steam
 
 ![xwayland-satellite running Steam and Half-Life.](https://github.com/user-attachments/assets/57db8f96-40d4-4621-a389-373c169349a4)
 
-You can also automatically run it at startup, and set `DISPLAY` by default for all apps by adding it to the [`environment`](./Configuration:-Miscellaneous.md#environment) section of the niri config:
+You can also automatically run it at startup, and set `DISPLAY` by default for all apps by adding it to the [`environment`](./Configuration-Miscellaneous.md#environment) section of the niri config:
 
 ```kdl
 spawn-at-startup "xwayland-satellite"
@@ -40,7 +40,7 @@ environment {
 
 > [!NOTE]
 > If the `:0` DISPLAY is already taken (for example, by some other Xwayland server like `xwayland-run`), `xwayland-satellite` will try the next DISPLAY numbers in order: `:1`, `:2`, etc. and tell you which one it used in its output.
-> Then, you will need to use that DISPLAY number for the `env` command or for the niri [`environment`](./Configuration:-Miscellaneous.md#environment) section.
+> Then, you will need to use that DISPLAY number for the `env` command or for the niri [`environment`](./Configuration-Miscellaneous.md#environment) section.
 >
 > You can also force a specific DISPLAY number like so: `xwayland-satellite :12` will start on `DISPLAY=:12`.
 
@@ -157,3 +157,4 @@ gamescope -W 2560 -H 1440 -w 2560 -h 1440 -f  -- flatpak run com.valvesoftware.S
 
 [xwayland-run]: https://gitlab.freedesktop.org/ofourdan/xwayland-run
 [xwayland-satellite]: https://github.com/Supreeeme/xwayland-satellite
+

@@ -16,7 +16,7 @@ switch-events {
 ```
 
 The syntax is similar to key bindings.
-Currently, only the [`spawn` action](./Configuration:-Key-Bindings.md#spawn) are supported.
+Currently, only the [`spawn` action](./Configuration-Key-Bindings.md#spawn) are supported.
 
 > [!NOTE]
 > In contrast to key bindings, switch event bindings are *always* executed, even when the session is locked.
@@ -45,3 +45,4 @@ switch-events {
     tablet-mode-off { spawn "bash" "-c" "gsettings set org.gnome.desktop.a11y.applications screen-keyboard-enabled false"; }
 }
 ```
+

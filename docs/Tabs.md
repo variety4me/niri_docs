@@ -24,7 +24,7 @@ Unlike regular columns, tabbed columns can go full-screen with multiple windows.
 Tabbed columns show a tab indicator on the side.
 You can click on the indicator to switch tabs.
 
-See the [`tab-indicator` section in the layout section](./Configuration:-Layout.md#tab-indicator) to configure it.
+See the [`tab-indicator` section in the layout section](./Configuration-Layout.md#tab-indicator) to configure it.
 
 By default, the indicator draws "outside" the column, so it can overlay other windows or go off-screen.
 The `place-within-column` flag puts the indicator "inside" the column, adjusting the window size to make space for it.
@@ -33,3 +33,4 @@ This is especially useful for thicker tab indicators, or when you have very smal
 | Default | `place-within-column` |
 | --- | --- |
 | ![](https://github.com/user-attachments/assets/c2f51f50-3d87-403a-8beb-cbbe5ec5c880) | ![](https://github.com/user-attachments/assets/f1797cd0-d518-4be6-95b4-3540523c4370) |
+

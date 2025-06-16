@@ -31,7 +31,7 @@ https://github.com/user-attachments/assets/b76d5349-aa20-4889-ab90-0a51554c789d
 
 ### Configuration
 
-See the full documentation for the `overview {}` section [here](./Configuration:-Miscellaneous.md#overview).
+See the full documentation for the `overview {}` section [here](./Configuration-Miscellaneous.md#overview).
 
 You can set the zoom-out level like this:
 
@@ -64,7 +64,7 @@ gestures {
 
 ### Backdrop customization
 
-Apart from setting a custom backdrop color like described above, you can also put a layer-shell wallpaper into the backdrop with a [layer rule](./Configuration:-Layer-Rules.md#place-within-backdrop), for example:
+Apart from setting a custom backdrop color like described above, you can also put a layer-shell wallpaper into the backdrop with a [layer rule](./Configuration-Layer-Rules.md#place-within-backdrop), for example:
 
 ```kdl
 // Put swaybg inside the overview backdrop.
@@ -102,3 +102,4 @@ overview {
     }
 }
 ```
+
