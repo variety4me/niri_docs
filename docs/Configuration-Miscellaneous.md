@@ -76,12 +76,12 @@ Additionally, clients will be informed that they are tiled, removing some rounde
 
 With `prefer-no-csd` set, applications that negotiate server-side decorations through the xdg-decoration protocol will have focus ring and border drawn around them *without* a solid colored background.
 
-> [!NOTE]
-> Unlike most other options, changing `prefer-no-csd` will not entirely affect already running applications.
-> It will make some windows rectangular, but won't remove the title bars.
-> This mainly has to do with niri working around a [bug in SDL2](https://github.com/libsdl-org/SDL/issues/8173) that prevents SDL2 applications from starting.
->
-> Restart applications after changing `prefer-no-csd` in the config to fully apply it.
+!!! NOTE
+    Unlike most other options, changing `prefer-no-csd` will not entirely affect already running applications.
+    It will make some windows rectangular, but won't remove the title bars.
+    This mainly has to do with niri working around a [bug in SDL2](https://github.com/libsdl-org/SDL/issues/8173) that prevents SDL2 applications from starting.
+    
+    Restart applications after changing `prefer-no-csd` in the config to fully apply it.
 
 ```kdl
 prefer-no-csd
@@ -137,9 +137,9 @@ cursor {
 
 If set, hides the cursor when pressing a key on the keyboard.
 
-> [!NOTE]
-> This setting might interfere with games running in Wine in native Wayland mode that use mouselook, such as first-person games.
-> If your character's point of view jumps down when you press a key and move the mouse simultaneously, try disabling this setting.
+!!! NOTE
+    This setting might interfere with games running in Wine in native Wayland mode that use mouselook, such as first-person games.
+    If your character's point of view jumps down when you press a key and move the mouse simultaneously, try disabling this setting.
 
 ```kdl
 cursor {

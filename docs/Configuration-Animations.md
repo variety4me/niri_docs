@@ -117,24 +117,18 @@ The `damping-ratio` goes from 0.1 to 10.0 and has the following properties:
 
 However, even with damping ratio = 1.0, the spring animation may oscillate if "launched" with enough velocity from a touchpad swipe.
 
-!!! note
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-
-> [!WARNING]
-> Overdamped springs currently have some numerical stability issues and may cause graphical glitches.
-> Therefore, setting `damping-ratio` above `1.0` is not recommended.
+!!! WARNING
+    Overdamped springs currently have some numerical stability issues and may cause graphical glitches.
+    Therefore, setting `damping-ratio` above `1.0` is not recommended.
 
 Lower `stiffness` will result in a slower animation more prone to oscillation.
 
 Set `epsilon` to a lower value if the animation "jumps" at the end.
 
-> [!TIP]
-> The spring *mass* (which you can see in Elastic) is hardcoded to 1.0 and cannot be changed.
-> Instead, change `stiffness` proportionally.
-> E.g. increasing mass by 2× is the same as decreasing stiffness by 2×.
+!!! TIP
+    The spring *mass* (which you can see in Elastic) is hardcoded to 1.0 and cannot be changed.
+    Instead, change `stiffness` proportionally.
+    E.g. increasing mass by 2× is the same as decreasing stiffness by 2×.
 
 ### Animations
 
@@ -178,10 +172,10 @@ See [this example shader](./examples/open_custom_shader.frag) for a full documen
 If a custom shader fails to compile, niri will print a warning and fall back to the default, or previous successfully compiled shader.
 When running niri as a systemd service, you can see the warnings in the journal: `journalctl -ef /usr/bin/niri`
 
-> [!WARNING]
->
-> Custom shaders do not have a backwards compatibility guarantee.
-> I may need to change their interface as I'm developing new features.
+!!! WARNING
+    
+    Custom shaders do not have a backwards compatibility guarantee.
+    I may need to change their interface as I'm developing new features.
 
 Example: open will fill the current geometry with a solid gradient that gradually fades in.
 
@@ -238,10 +232,10 @@ See [this example shader](./examples/close_custom_shader.frag) for a full docume
 If a custom shader fails to compile, niri will print a warning and fall back to the default, or previous successfully compiled shader.
 When running niri as a systemd service, you can see the warnings in the journal: `journalctl -ef /usr/bin/niri`
 
-> [!WARNING]
->
-> Custom shaders do not have a backwards compatibility guarantee.
-> I may need to change their interface as I'm developing new features.
+!!! WARNING
+    
+    Custom shaders do not have a backwards compatibility guarantee.
+    I may need to change their interface as I'm developing new features.
 
 Example: close will fill the current geometry with a solid gradient that gradually fades away.
 
@@ -334,10 +328,10 @@ See [this example shader](./examples/resize_custom_shader.frag) for a full docum
 If a custom shader fails to compile, niri will print a warning and fall back to the default, or previous successfully compiled shader.
 When running niri as a systemd service, you can see the warnings in the journal: `journalctl -ef /usr/bin/niri`
 
-> [!WARNING]
->
-> Custom shaders do not have a backwards compatibility guarantee.
-> I may need to change their interface as I'm developing new features.
+!!! WARNING
+    
+    Custom shaders do not have a backwards compatibility guarantee.
+    I may need to change their interface as I'm developing new features.
 
 Example: resize will show the next (after resize) window texture right away, stretched to the current geometry.
 

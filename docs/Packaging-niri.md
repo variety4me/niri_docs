@@ -4,11 +4,10 @@ When building niri, check `Cargo.toml` for a list of build features.
 For example, you can replace systemd integration with dinit integration using `cargo build --release --no-default-features --features dinit,dbus,xdp-gnome-screencast`.
 The defaults however should work fine for most distributions.
 
-> [!WARNING]
-> Do NOT build with `--all-features`!
->
-> Some features are meant only for development use.
-> For example, one of the features enables collection of profiling data into a memory buffer that will grow indefinitely until you run out of memory.
+!!! WARNING
+   Do NOT build with `--all-features`!
+   Some features are meant only for development use.
+   For example, one of the features enables collection of profiling data into a memory buffer that will grow indefinitely until you run out of memory.
 
 The `niri-visual-tests` sub-crate/binary is development-only and should not be packaged.
 
@@ -121,3 +120,4 @@ It contains the exact dependency versions that I used when testing the release.
 If you need to change the versions of some dependencies, pay extra attention to `smithay` and `smithay-drm-extras` commit hash.
 These crates don't currently have regular stable releases, so niri uses git snapshots.
 Upstream frequently has breaking changes (API and behavior), so you're strongly advised to use the exact commit hash from the niri release's `Cargo.lock`.
+

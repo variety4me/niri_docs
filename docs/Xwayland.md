@@ -8,13 +8,12 @@ It makes X11 windows appear as normal windows, just like a native Xwayland integ
 xwayland-satellite works well with most applications: Steam, games, Discord, even more exotic things like Ardour with wine Windows VST plugins.
 However, X11 apps that want to position windows or bars at specific screen coordinates won't behave correctly.
 
-> [!NOTE]
-> In the next release, niri will have [built-in xwayland-satellite integration](./Configuration-Miscellaneous.md#xwayland-satellite).
-> You can try it by installing git versions of both niri and xwayland-satellite.
-> With no further configuration, niri will create X11 sockets, then when an X11 client connects, automatically start xwayland-satellite.
->
-> This matches how other compositors run Xwayland (but in niri's case, it's xwayland-satellite rather than Xwayland itself).
-> It also makes X11 apps work fine in `spawn-at-startup` and in XDG autostart.
+!!! NOTE
+    In the next release, niri will have [built-in xwayland-satellite integration](./Configuration-Miscellaneous.md#xwayland-satellite).
+    You can try it by installing git versions of both niri and xwayland-satellite.
+    With no further configuration, niri will create X11 sockets, then when an X11 client connects, automatically start xwayland-satellite.
+    This matches how other compositors run Xwayland (but in niri's case, it's xwayland-satellite rather than Xwayland itself).
+    It also makes X11 apps work fine in `spawn-at-startup` and in XDG autostart.
 
 Install it from your package manager, or build it according to instructions from its README, then run the `xwayland-satellite` binary.
 Look for a log message like: `Connected to Xwayland on :0`.
@@ -38,11 +37,10 @@ environment {
 }
 ```
 
-> [!NOTE]
-> If the `:0` DISPLAY is already taken (for example, by some other Xwayland server like `xwayland-run`), `xwayland-satellite` will try the next DISPLAY numbers in order: `:1`, `:2`, etc. and tell you which one it used in its output.
-> Then, you will need to use that DISPLAY number for the `env` command or for the niri [`environment`](./Configuration-Miscellaneous.md#environment) section.
->
-> You can also force a specific DISPLAY number like so: `xwayland-satellite :12` will start on `DISPLAY=:12`.
+!!! NOTE
+    If the `:0` DISPLAY is already taken (for example, by some other Xwayland server like `xwayland-run`), `xwayland-satellite` will try the next DISPLAY numbers in order: `:1`, `:2`, etc. and tell you which one it used in its output.
+    Then, you will need to use that DISPLAY number for the `env` command or for the niri [`environment`](./Configuration-Miscellaneous.md#environment) section.
+    You can also force a specific DISPLAY number like so: `xwayland-satellite :12` will start on `DISPLAY=:12`.
 
 ## Using the labwc Wayland compositor
 
@@ -73,9 +71,9 @@ This way you can manage X11 windows inside the Xwayland instance.
 
 With fullscreen game inside a fullscreen Xwayland you get pretty much a normal gaming experience.
 
-> [!TIP]
-> If you don't run an X11 window manager, Xwayland will close and re-open its window every time all X11 windows close and a new one opens.
-> To prevent this, start an X11 WM inside as mentioned above, or open some other long-running X11 window.
+!!! TIP
+    If you don't run an X11 window manager, Xwayland will close and re-open its window every time all X11 windows close and a new one opens.
+    To prevent this, start an X11 WM inside as mentioned above, or open some other long-running X11 window.
 
 One caveat is that currently rootful Xwayland doesn't seem to share clipboard with the compositor.
 For textual data you can do it manually using [wl-clipboard](https://github.com/bugaevc/wl-clipboard), for example:
@@ -151,9 +149,9 @@ To run gamescope fullscreen, you can pass flags that set the necessary resolutio
 gamescope -W 2560 -H 1440 -w 2560 -h 1440 -f  -- flatpak run com.valvesoftware.Steam
 ```
 
-> [!NOTE]
-> If Steam terminates abnormally while running in gamescope, it seems that subsequent gamescope invocations will sometimes fail to start it properly.
-> If this happens, run Steam inside a rootful Xwayland as described above, then exit it normally, and then you will be able to use gamescope again.
+!!! NOTE
+    If Steam terminates abnormally while running in gamescope, it seems that subsequent gamescope invocations will sometimes fail to start it properly.
+    If this happens, run Steam inside a rootful Xwayland as described above, then exit it normally, and then you will be able to use gamescope again.
 
 [xwayland-run]: https://gitlab.freedesktop.org/ofourdan/xwayland-run
 [xwayland-satellite]: https://github.com/Supreeeme/xwayland-satellite

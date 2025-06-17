@@ -20,9 +20,9 @@ window-rule {
 }
 ```
 
-> [!TIP]
-> In general, you cannot "unset" a property in a later rule, only set it to a different value.
-> Use the `exclude` directives to avoid applying a rule for specific windows.
+!!! TIP
+    In general, you cannot "unset" a property in a later rule, only set it to a different value.
+    Use the `exclude` directives to avoid applying a rule for specific windows.
 
 Here are all matchers and properties that a window rule could have:
 
@@ -174,14 +174,14 @@ window-rule {
 
 You can find the title and the app ID of the currently focused window by running `niri msg focused-window`.
 
-> [!TIP]
-> Another way to find the window title and app ID is to configure the `wlr/taskbar` module in [Waybar](https://github.com/Alexays/Waybar) to include them in the tooltip:
-> 
-> ```json
-> "wlr/taskbar": {
->     "tooltip-format": "{title} | {app_id}",
-> }
-> ```
+!!! TIP
+    Another way to find the window title and app ID is to configure the `wlr/taskbar` module in [Waybar](https://github.com/Alexays/Waybar) to include them in the tooltip:
+    
+    ```json
+    "wlr/taskbar": {
+        "tooltip-format": "{title} | {app_id}",
+    }
+    ```
 
 #### `is-active`
 
@@ -237,9 +237,9 @@ window-rule {
 Can be `true` or `false`.
 Matches floating windows.
 
-> [!NOTE]
-> This matcher will apply only after the window is already open.
-> This means that you cannot use it to change the window opening properties like `default-window-height` or `open-on-workspace`.
+!!! NOTE
+    This matcher will apply only after the window is already open.
+    This means that you cannot use it to change the window opening properties like `default-window-height` or `open-on-workspace`.
 
 ```kdl
 window-rule {
@@ -254,9 +254,9 @@ window-rule {
 Can be `true` or `false`.
 Matches `true` for windows that are target of an ongoing window screencast.
 
-> [!NOTE]
-> This only matches individual-window screencasts.
-> It will not match windows that happen to be visible in a monitor screencast, for example.
+!!! NOTE
+    This only matches individual-window screencasts.
+    It will not match windows that happen to be visible in a monitor screencast, for example.
 
 ```kdl
 // Indicate screencasted windows with red colors.
@@ -506,9 +506,9 @@ For layer-shell notification pop-ups and the like, you can use a [`block-out-fro
 
 To preview and set up this rule, check the `preview-render` option in the debug section of the config.
 
-> [!CAUTION]
-> The window is **not** blocked out from third-party screenshot tools.
-> If you open some screenshot tool with preview while screencasting, blocked out windows **will be visible** on the screencast.
+!!! CAUTION
+    The window is **not** blocked out from third-party screenshot tools.
+    If you open some screenshot tool with preview while screencasting, blocked out windows **will be visible** on the screencast.
 
 The built-in screenshot UI is not affected by this problem though.
 If you open the screenshot UI while screencasting, you will be able to select the area to screenshot while seeing all windows normally, but on a screencast the selection UI will display with windows blocked out.
@@ -535,26 +535,25 @@ window-rule {
 }
 ```
 
-> [!WARNING]
-> Be careful when blocking out windows based on a dynamically changing window title.
->
-> For example, you might try to block out specific Firefox tabs like this:
->
-> ```kdl
-> window-rule {
->     // Doesn't quite work! Try to block out the Gmail tab.
->     match app-id="firefox$" title="- Gmail "
->
->     block-out-from "screencast"
-> }
-> ```
->
-> It will work, but when switching from a sensitive tab to a regular tab, the contents of the sensitive tab **will show up on a screencast** for an instant.
->
-> This is because window title (and app ID) are not double-buffered in the Wayland protocol, so they are not tied to specific window contents.
-> There's no robust way for Firefox to synchronize visibly showing a different tab and changing the window title.
-
-#### `opacity`
+!!! WARNING
+    Be careful when blocking out windows based on a dynamically changing window title.
+    
+    For example, you might try to block out specific Firefox tabs like this:
+    
+    ```kdl
+    window-rule {
+        // Doesn't quite work! Try to block out the Gmail tab.
+        match app-id="firefox$" title="- Gmail "
+    
+        block-out-from "screencast"
+    }
+    ```
+    
+    It will work, but when switching from a sensitive tab to a regular tab, the contents of the sensitive tab **will show up on a screencast** for an instant.
+    
+    This is because window title (and app ID) are not double-buffered in the Wayland protocol, so they are not tied to specific window contents.
+    There's no robust way for Firefox to synchronize visibly showing a different tab and changing the window title.
+    #### `opacity`
 
 Set the opacity of the window.
 `0.0` is fully transparent, `1.0` is fully opaque.
@@ -890,11 +889,11 @@ You can amend the window's minimum and maximum size in logical pixels.
 Keep in mind that the window itself always has a final say in its size.
 These values instruct niri to never ask the window to be smaller than the minimum you set, or to be bigger than the maximum you set.
 
-> [!NOTE]
-> `max-height` will only apply to automatically-sized windows if it is equal to `min-height`.
-> Either set it equal to `min-height`, or change the window height manually after opening it with `set-window-height`.
->
-> This is a limitation of niri's window height distribution algorithm.
+!!! NOTE
+    `max-height` will only apply to automatically-sized windows if it is equal to `min-height`.
+    Either set it equal to `min-height`, or change the window height manually after opening it with `set-window-height`.
+    
+    This is a limitation of niri's window height distribution algorithm.
 
 ```kdl
 window-rule {

@@ -2,8 +2,8 @@
 
 Key bindings are declared in the `binds {}` section of the config.
 
-> [!NOTE]
-> This is one of the few sections that *does not* get automatically filled with defaults if you omit it, so make sure to copy it from the default config.
+!!! NOTE
+    This is one of the few sections that *does not* get automatically filled with defaults if you omit it, so make sure to copy it from the default config.
 
 Each bind is a hotkey followed by one action enclosed in curly brackets.
 For example:
@@ -33,34 +33,28 @@ For this reason, most of the default keys use the `Mod` modifier.
 
 <sup>Since: 25.05</sup> You can customize the `Mod` key [in the `input` section of the config](./Configuration-Input.md#mod-key-mod-key-nested).
 
-> [!TIP]
-> To find an XKB name for a particular key, you may use a program like [`wev`](https://git.sr.ht/~sircmpwn/wev).
->
-> Open it from a terminal and press the key that you want to detect.
-> In the terminal, you will see output like this:
->
-> ```
-> [14:     wl_keyboard] key: serial: 757775; time: 44940343; key: 113; state: 1 (pressed)
->                       sym: Left         (65361), utf8: ''
-> [14:     wl_keyboard] key: serial: 757776; time: 44940432; key: 113; state: 0 (released)
->                       sym: Left         (65361), utf8: ''
-> [14:     wl_keyboard] key: serial: 757777; time: 44940753; key: 114; state: 1 (pressed)
->                       sym: Right        (65363), utf8: ''
-> [14:     wl_keyboard] key: serial: 757778; time: 44940846; key: 114; state: 0 (released)
->                       sym: Right        (65363), utf8: ''
-> ```
->
-> Here, look at `sym: Left` and `sym: Right`: these are the key names.
-> I was pressing the left and the right arrow in this example.
->
-> Keep in mind that binding shifted keys requires spelling out Shift and the unshifted version of the key, according to your XKB layout.
-> For example, on the US QWERTY layout, <kbd>&lt;</kbd> is on <kbd>Shift</kbd> + <kbd>,</kbd>, so to bind it, you spell out something like `Mod+Shift+Comma`.
->
-> As another example, if you've configured the French [BÉPO](https://en.wikipedia.org/wiki/B%C3%89PO) XKB layout, your <kbd>&lt;</kbd> is on <kbd>AltGr</kbd> + <kbd>«</kbd>.
-> <kbd>AltGr</kbd> is `ISO_Level3_Shift`, or equivalently `Mod5`, so to bind it, you spell out something like `Mod+Mod5+guillemotleft`.
->
-> When resolving latin keys, niri will search for the *first* configured XKB layout that has the latin key.
-> So for example with US QWERTY and RU layouts configured, US QWERTY will be used for latin binds.
+!!! TIP
+    To find an XKB name for a particular key, you may use a program like [`wev`](https://git.sr.ht/~sircmpwn/wev).
+    Open it from a terminal and press the key that you want to detect.
+    In the terminal, you will see output like this:
+    ```
+    [14:     wl_keyboard] key: serial: 757775; time: 44940343; key: 113; state: 1 (pressed)
+                        sym: Left         (65361), utf8: ''
+    [14:     wl_keyboard] key: serial: 757776; time: 44940432; key: 113; state: 0 (released)
+                        sym: Left         (65361), utf8: ''
+    [14:     wl_keyboard] key: serial: 757777; time: 44940753; key: 114; state: 1 (pressed)
+                        sym: Right        (65363), utf8: ''
+    [14:     wl_keyboard] key: serial: 757778; time: 44940846; key: 114; state: 0 (released)
+                        sym: Right        (65363), utf8: ''
+    ```
+    Here, look at `sym: Left` and `sym: Right`: these are the key names.
+    I was pressing the left and the right arrow in this example.
+    Keep in mind that binding shifted keys requires spelling out Shift and the unshifted version of the key, according to your XKB layout.
+    For example, on the US QWERTY layout, <kbd>&lt;</kbd> is on <kbd>Shift</kbd> + <kbd>,</kbd>, so to bind it, you spell out something like `Mod+Shift+Comma`.
+    As another example, if you've configured the French [BÉPO](https://en.wikipedia.org/wiki/B%C3%89PO) XKB layout, your <kbd>&lt;</kbd> is on <kbd>AltGr</kbd> + <kbd>«</kbd>.
+    <kbd>AltGr</kbd> is `ISO_Level3_Shift`, or equivalently `Mod5`, so to bind it, you spell out something like `Mod+Mod5+guillemotleft`.
+    When resolving latin keys, niri will search for the *first* configured XKB layout that has the latin key.
+    So for example with US QWERTY and RU layouts configured, US QWERTY will be used for latin binds.
 
 <sup>Since: 0.1.8</sup> Binds will repeat by default (i.e. holding down a bind will make it trigger repeatedly).
 You can disable that for specific binds with `repeat=false`:
@@ -153,11 +147,11 @@ binds {
 }
 ```
 
-> [!TIP]
-> When multiple key combinations are bound to the same action:
-> - If any of the binds has a custom hotkey overlay title, niri will show that bind.
-> - Otherwise, if any of the binds has a null title, niri will hide the bind.
-> - Otherwise, niri will show the first key combination.
+!!! TIP
+    When multiple key combinations are bound to the same action:
+    - If any of the binds has a custom hotkey overlay title, niri will show that bind.
+    - Otherwise, if any of the binds has a null title, niri will hide the bind.
+    - Otherwise, niri will show the first key combination.
 
 Custom titles support [Pango markup](https://docs.gtk.org/Pango/pango_markup.html):
 
@@ -193,18 +187,15 @@ binds {
 }
 ```
 
-> [!TIP]
->
-> <sup>Since: 0.1.5</sup>
->
-> Spawn bindings have a special `allow-when-locked=true` property that makes them work even while the session is locked:
->
-> ```kdl
-> binds {
->     // This mute bind will work even when the session is locked.
->     XF86AudioMute allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-> }
-> ```
+!!! TIP
+    <sup>Since: 0.1.5</sup>
+    Spawn bindings have a special `allow-when-locked=true` property that makes them work even while the session is locked:
+    ```kdl
+    binds {
+        // This mute bind will work even when the session is locked.
+        XF86AudioMute allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    }
+    ```
 
 Currently, niri *does not* use a shell to run commands, which means that you need to manually separate arguments.
 

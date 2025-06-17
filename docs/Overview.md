@@ -14,11 +14,10 @@ While in the overview, all keyboard shortcuts keep working, while pointing devic
 - Touchpad: two-finger scrolling that matches the normal three-finger gestures.
 - Touchscreen: one-finger scrolling, or one-finger long press to move a window.
 
-> [!TIP]
-> The overview needs to draw a background under every workspace.
-> So, layer-shell surfaces work this way: the *background* and *bottom* layers zoom out together with the workspaces, while the *top* and *overlay* layers remain on top of the overview.
->
-> Put your bar on the *top* layer.
+!!! TIP
+    The overview needs to draw a background under every workspace.
+    So, layer-shell surfaces work this way: the *background* and *bottom* layers zoom out together with the workspaces, while the *top* and *overlay* layers remain on top of the overview.
+    Put your bar on the *top* layer.
 
 Drag-and-drop will scroll the workspaces up/down in the overview, and will activate a workspace when holding it for a moment.
 Combined with the hot corner, this lets you do a mouse-only DnD across workspaces.

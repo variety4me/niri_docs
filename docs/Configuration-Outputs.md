@@ -113,10 +113,10 @@ Set the position of the output in the global coordinate space.
 This affects directional monitor actions like `focus-monitor-left`, and cursor movement.
 The cursor can only move between directly adjacent outputs.
 
-> [!NOTE]
-> Output scale and rotation has to be taken into account for positioning: outputs are sized in logical, or scaled, pixels.
-> For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080, so to put another output directly adjacent to it on the right, set its x to 1920.
-> If the position is unset or results in an overlap, the output is instead placed automatically.
+!!! NOTE
+    Output scale and rotation has to be taken into account for positioning: outputs are sized in logical, or scaled, pixels.
+    For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080, so to put another output directly adjacent to it on the right, set its x to 1920.
+    If the position is unset or results in an overlap, the output is instead placed automatically.
 
 ```kdl
 output "HDMI-A-1" {
@@ -142,14 +142,11 @@ This flag enables variable refresh rate (VRR, also known as adaptive sync, FreeS
 
 You can check whether an output supports VRR in `niri msg outputs`.
 
-> [!NOTE]
-> Some drivers have various issues with VRR.
->
-> If the cursor moves at a low framerate with VRR, try setting the [`disable-cursor-plane` debug flag](./Configuration-Debug-Options.md#disable-cursor-plane) and reconnecting the monitor.
->
-> If a monitor is not detected as VRR-capable when it should, sometimes unplugging a different monitor fixes it.
->
-> Some monitors will continuously modeset (flash black) with VRR enabled; I'm not sure if there's a way to fix it.
+!!! NOTE
+    Some drivers have various issues with VRR.
+    If the cursor moves at a low framerate with VRR, try setting the [`disable-cursor-plane` debug flag](./Configuration-Debug-Options.md#disable-cursor-plane) and reconnecting the monitor.
+    If a monitor is not detected as VRR-capable when it should, sometimes unplugging a different monitor fixes it.
+    Some monitors will continuously modeset (flash black) with VRR enabled; I'm not sure if there's a way to fix it.
 
 ```kdl
 output "HDMI-A-1" {

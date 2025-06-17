@@ -54,15 +54,13 @@ cargo build --release --features=profile-with-tracy-ondemand
 
 Then you can open Tracy (you will need the latest stable release) and attach to a running niri instance to collect profiling data. Profiling data is collected "on demand"—that is, only when Tracy is connected. You can run a niri build like this as your main compositor if you'd like.
 
-> [!NOTE]
-> If you need to profile niri startup or the niri CLI, you can opt for "always on" profiling instead, using this feature flag:
->
-> ```
-> cargo build --release --features=profile-with-tracy
-> ```
->
-> When compiled this way, niri will **always** collect profiling data, so you can't run a build like this as your main compositor.
-
+!!! NOTE
+    If you need to profile niri startup or the niri CLI, you can opt for "always on" profiling instead, using this feature flag:
+    ```
+    cargo build --release --features=profile-with-tracy
+    ```
+    When compiled this way, niri will **always** collect profiling data, so you can't run a build like this as your main compositor.
+    
 To make a niri function show up in Tracy, instrument it like this:
 
 ```rust
@@ -74,3 +72,4 @@ pub fn some_function() {
 ```
 
 You can also enable Rust memory allocation profiling with `--features=profile-with-tracy-allocations`.
+

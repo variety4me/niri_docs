@@ -144,11 +144,10 @@ Then, build niri with `cargo build --release`.
 Check Cargo.toml for a list of build features.
 For example, you can replace systemd integration with dinit integration using `cargo build --release --no-default-features --features dinit,dbus,xdp-gnome-screencast`.
 
-> [!WARNING]
-> Do NOT build with `--all-features`!
->
-> Some features are meant only for development use.
-> For example, one of the features enables collection of profiling data into a memory buffer that will grow indefinitely until you run out of memory.
+!!! WARNING
+    Do NOT build with `--all-features`!
+    Some features are meant only for development use.
+    For example, one of the features enables collection of profiling data into a memory buffer that will grow indefinitely until you run out of memory.
 
 ### NixOS/Nix
 

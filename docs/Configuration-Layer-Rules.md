@@ -121,11 +121,11 @@ These rules have the same options as the normal [`shadow` config in the layout s
 Unlike window shadows, layer surface shadows always need to be enabled with a layer rule.
 That is, enabling shadows in the layout config section won't automatically enable them for layer surfaces.
 
-> [!NOTE]
-> Layer surfaces have no way to tell niri about their *visual geometry*.
-> For example, if a layer surface includes some invisible margins (like mako), niri has no way of knowing that, and will draw the shadow behind the entire surface, including the invisible margins.
->
-> So to use niri shadows, you'll need to configure layer-shell clients to remove their own margins or shadows.
+!!! NOTE
+    Layer surfaces have no way to tell niri about their *visual geometry*.
+    For example, if a layer surface includes some invisible margins (like mako), niri has no way of knowing that, and will draw the shadow behind the entire surface, including the invisible margins.
+    
+    So to use niri shadows, you'll need to configure layer-shell clients to remove their own margins or shadows.
 
 ```kdl
 // Add a shadow for fuzzel.

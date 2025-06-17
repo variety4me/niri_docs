@@ -25,9 +25,9 @@ You can move a workspace to a different monitor using binds like `move-workspace
 When you disconnect a monitor, its workspaces will automatically move to a different monitor.
 But, they will also "remember" their original monitor, so when you reconnect it, the workspaces will automatically move back to it.
 
-> [!TIP]
-> From other tiling WMs, you may be used to thinking about workspaces like this: "These are all of my workspaces. I can show workspace X on my first monitor, and workspace Y on my second monitor."
-> In niri, instead, think like this: "My first monitor contains these workspaces, including X and Y, and my second monitor contains these other workspaces. I can switch my first monitor to workspace X or Y. I can move workspace Y to my second monitor to show it there."
+!!! TIP
+    From other tiling WMs, you may be used to thinking about workspaces like this: "These are all of my workspaces. I can show workspace X on my first monitor, and workspace Y on my second monitor."
+    In niri, instead, think like this: "My first monitor contains these workspaces, including X and Y, and my second monitor contains these other workspaces. I can switch my first monitor to workspace X or Y. I can move workspace Y to my second monitor to show it there."
 
 ### Addressing workspaces by index
 
@@ -42,12 +42,11 @@ If you take the first workspace and move it further down on the monitor, `focus-
 When you want to have a more permanent workspace in niri, you can create a [named workspace](./Configuration-Named-Workspaces.md) in the config or via the `set-workspace-name` action.
 You can refer to named workspaces by name, e.g. `focus-workspace "browser"`, and they won't disappear when they become empty.
 
-> [!TIP]
-> You can try to emulate static workspaces by creating workspaces named "one", "two", "three", ..., and binding keys to `focus-workspace "one"`, `focus-workspace "two"`, ...
-> This can work to some extent, but it can become somewhat confusing, since you can still move these workspaces up and down and between monitors.
->
-> If you're coming from a static workspace WM, I suggest *not* doing that, but instead trying the "niri way" with dynamic workspaces, focusing and moving up/down instead of by index.
-> Thanks to scrollable tiling, you generally need fewer workspaces than on a traditional tiling WM.
+!!! TIP
+    You can try to emulate static workspaces by creating workspaces named "one", "two", "three", ..., and binding keys to `focus-workspace "one"`, `focus-workspace "two"`, ...
+    This can work to some extent, but it can become somewhat confusing, since you can still move these workspaces up and down and between monitors.
+    If you're coming from a static workspace WM, I suggest *not* doing that, but instead trying the "niri way" with dynamic workspaces, focusing and moving up/down instead of by index.
+    Thanks to scrollable tiling, you generally need fewer workspaces than on a traditional tiling WM.
 
 ### Example workflow
 

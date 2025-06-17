@@ -4,9 +4,9 @@ Check `niri msg --help` for available commands.
 The `--json` flag prints the response in JSON, rather than formatted.
 For example, `niri msg --json outputs`.
 
-> [!TIP]
-> If you're getting parsing errors from `niri msg` after upgrading niri, make sure that you've restarted niri itself.
-> You might be trying to run a newer `niri msg` against an older `niri` compositor.
+!!! TIP
+    If you're getting parsing errors from `niri msg` after upgrading niri, make sure that you've restarted niri itself.
+    You might be trying to run a newer `niri msg` against an older `niri` compositor.
 
 ### Event Stream
 
@@ -73,3 +73,4 @@ Please prefer the JSON output for scripts, since I reserve the right to make any
 
 The `niri-ipc` sub-crate (like other niri sub-crates) is *not* API-stable in terms of the Rust semver; rather, it follows the version of niri itself.
 In particular, new struct fields and enum variants will be added.
+

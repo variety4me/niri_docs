@@ -250,15 +250,15 @@ The difference is that the focus ring is drawn only around the active window, wh
 | ------------------------- | --------------------- |
 | ![](./img/focus-ring.png) | ![](./img/border.png) |
 
-> [!TIP]
-> By default, focus ring and border are rendered as a solid background rectangle behind windows.
-> That is, they will show up through semitransparent windows.
-> This is because windows using client-side decorations can have an arbitrary shape.
->
-> If you don't like that, you should uncomment the [`prefer-no-csd` setting](./Configuration-Miscellaneous.md#prefer-no-csd) at the top level of the config.
-> Niri will draw focus rings and borders *around* windows that agree to omit their client-side decorations.
->
-> Alternatively, you can override this behavior with the [`draw-border-with-background` window rule](./Configuration-Window-Rules.md#draw-border-with-background).
+!!! TIP
+    By default, focus ring and border are rendered as a solid background rectangle behind windows.
+    That is, they will show up through semitransparent windows.
+    This is because windows using client-side decorations can have an arbitrary shape.
+    
+    If you don't like that, you should uncomment the [`prefer-no-csd` setting](./Configuration-Miscellaneous.md#prefer-no-csd) at the top level of the config.
+    Niri will draw focus rings and borders *around* windows that agree to omit their client-side decorations.
+    
+    Alternatively, you can override this behavior with the [`draw-border-with-background` window rule](./Configuration-Window-Rules.md#draw-border-with-background).
 
 Focus ring and border have the following options.
 
@@ -401,8 +401,8 @@ These will also remove client-side shadows if the window draws any.
 
 Shadow drawing will follow the window corner radius set with the [`geometry-corner-radius` window rule](./Configuration-Window-Rules.md#geometry-corner-radius).
 
-> [!NOTE]
-> Currently, shadow drawing only supports matching radius for all corners. If you set `geometry-corner-radius` to four values instead of one, the first (top-left) corner radius will be used for shadows.
+!!! NOTE
+    Currently, shadow drawing only supports matching radius for all corners. If you set `geometry-corner-radius` to four values instead of one, the first (top-left) corner radius will be used for shadows.
 
 ```kdl
 // Enable shadows.

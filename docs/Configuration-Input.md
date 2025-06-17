@@ -122,22 +122,19 @@ input {
 }
 ```
 
-> [!TIP]
->
-> <sup>Since: 25.02</sup>
->
-> Alternatively, you can directly set a path to a .xkb file containing an xkb keymap.
-> This overrides all other xkb settings.
->
-> ```kdl
-> input {
->     keyboard {
->         xkb {
->             file "~/.config/keymap.xkb"
->         }
->     }
-> }
-> ```
+!!! TIP
+    <sup>Since: 25.02</sup>
+    Alternatively, you can directly set a path to a .xkb file containing an xkb keymap.
+    This overrides all other xkb settings.
+    ```kdl
+    input {
+        keyboard {
+            xkb {
+                file "~/.config/keymap.xkb"
+            }
+        }
+    }
+    ```
 
 When using multiple layouts, niri can remember the current layout globally (the default) or per-window.
 You can control this with the `track-layout` option.
@@ -333,9 +330,9 @@ Only valid modifiers are allowed, e.g. `Super`, `Alt`, `Mod3`, `Mod5`, `Ctrl`, `
 
 By default, `Mod` is equal to `Super` when running niri on a TTY, and to `Alt` when running niri as a nested winit window.
 
-> [!NOTE]
-> There are a lot of default bindings with Mod, none of them "make it through" to the underlying window.
-> You probably don't want to set `mod-key` to Ctrl or Shift, since Ctrl is commonly used for app hotkeys, and Shift is used for, well, regular typing.
+!!! NOTE
+    There are a lot of default bindings with Mod, none of them "make it through" to the underlying window.
+    You probably don't want to set `mod-key` to Ctrl or Shift, since Ctrl is commonly used for app hotkeys, and Shift is used for, well, regular typing.
 
 ```kdl
 // Switch the mod keys around: use Alt normally, and Super inside a nested window.
