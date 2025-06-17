@@ -117,6 +117,12 @@ The `damping-ratio` goes from 0.1 to 10.0 and has the following properties:
 
 However, even with damping ratio = 1.0, the spring animation may oscillate if "launched" with enough velocity from a touchpad swipe.
 
+!!! note
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
 > [!WARNING]
 > Overdamped springs currently have some numerical stability issues and may cause graphical glitches.
 > Therefore, setting `damping-ratio` above `1.0` is not recommended.
@@ -410,3 +416,4 @@ Therefore, for the best results, consider using the same parameters for related 
 - `horizontal-view-movement`
 - `window-movement`
 - `window-resize`
+
